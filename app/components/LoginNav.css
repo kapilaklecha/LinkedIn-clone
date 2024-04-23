@@ -1,0 +1,46 @@
+.nav {
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 1128px;
+}
+
+.nav_link {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    color: gray;
+    margin: 0 8px;
+}
+
+
+
+.nav_link>span {
+    font-size: 12px;
+}
+
+.nav_link:hover {
+    color: black;
+}
+
+
+
+.button {
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    /* Styles for tablets and larger screens */
+    .nav_link {
+        display: none;
+        /* Hide other navigation items */
+    }
+}
