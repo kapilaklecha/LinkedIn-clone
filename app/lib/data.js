@@ -9,3 +9,10 @@ export const exploreData = [
   "Telecommunications",
   "HR Management",
 ];
+
+export const navData = [
+  {
+    Link: "/Home",
+    label: "Home",
+  },
+];

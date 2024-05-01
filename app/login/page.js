@@ -81,7 +81,9 @@ const loginPage = () => {
             </p>
           </div>
           <div>
-            <h3 className=" mb-5 text-gray-500 text-[14px]">SUGGESTED TOOLS</h3>
+            <h3 className=" mb-5 text-gray-500 text-[14px] font-medium">
+              SUGGESTED TOOLS
+            </h3>
 
             <div className=" flex flex-wrap flex-shrink  items-center  max-w-[648px]  md:ml-1">
               {exploreData.map((val) => (

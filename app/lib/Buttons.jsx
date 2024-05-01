@@ -4,7 +4,7 @@ export const Buttons = ({ name }) => {
   return (
     <a
       href=""
-      className=" btn-md flex items-center mr-1.5 mb-3 shadow-border shadow-slate-900 w-fit "
+      className="  btn-md  flex items-center mr-1.5 mb-3 shadow-border shadow-slate-900 w-fit "
     >
       {name}
     </a>
