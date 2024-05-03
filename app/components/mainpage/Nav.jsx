@@ -19,30 +19,41 @@ import React from "react";
 const Nav = () => {
   const pathname = usePathname();
   return (
-    <div className=" bg-white border-b border-gray-200 fixed left-0 top-0 w-[100vw] px-6 z-50">
+    <div className=" bg-white border-b border-gray-200 skicky left-0 top-0 w-[100vw] px-6 z-50">
       <div className=" flex items-center my-0 mx-auto min-h-[100%] max-w-[1128px] ">
-        <span className=" mr-2 text-[0px] ">
-          <a href="home">
-            <img src="/home-logo.svg" alt="home-logo" />
-          </a>
-        </span>
-        <div className=" opacity-100 flex-grow relative ">
-          <div className=" max-w-[280x]">
-            <input
-              type="text"
-              placeholder="Search"
-              className=" border-none shadow-[none] bg-[#eef3f8] rounded-sm text-[rgba(0,0,0,0.9)] w-[218px] py-0 pr-2 pl-10 leading-7 font-normal text-[14px] h-[34px] border-[#dce6f1] align-text-top"
-            />
+        <div className=" flex my-1 w-full">
+          <span className=" mr-2 text-[0px] ">
+            <a href="home">
+              <img src="/home-logo.svg" alt="home-logo" />
+            </a>
+          </span>
+          <div className=" opacity-100 flex-grow relative ">
+            <div className=" max-w-[280x] mr-4">
+              <input
+                type="text"
+                placeholder="Search"
+                className=" border-none shadow-[none] bg-[#eef3f8] rounded-sm text-[rgba(0,0,0,0.9)] w-[218px] py-0 pr-2 pl-10 leading-7 font-normal text-[14px] h-[34px] border-[#dce6f1] align-text-top md:w-full"
+              />
+            </div>
+            <div className=" w-10 absolute z-[1] top-[7px] left-[2px] m-0 pointer-events-none flex justify-center items-center   ">
+              <Search />
+            </div>
           </div>
-          <div className=" w-10 absolute z-[1] top-[7px] left-[2px] m-0 pointer-events-none flex justify-center items-center   ">
-            <Search />
+          <div
+            className={` text-secondary flex items-center hover:text-black mdmin:hidden ${
+              pathname === "/message" ? "border-b-2" : ""
+            }`}
+          >
+            <Link href="/message">
+              <Message />
+            </Link>
           </div>
         </div>
-        <nav className=" ml-auto block md:fixed md:left-0 md:bottom-0 md:bg-white md:w-[100%] ">
-          <ul className="flex flex-nowrap list-none ">
+        <nav className=" ml-auto block md:fixed md:left-0 md:bottom-0 md:bg-white md:w-[100%]  ">
+          <ul className="flex flex-nowrap list-none md:flex md:justify-between">
             <li className={`NavList ${pathname === "/" ? "border-b-2" : ""}`}>
               <Link href="/" className=" NavList__link">
-                <HomeIcon className=" text-neutral-600" />
+                <HomeIcon />
                 <span className=" NavList__text">Home</span>
               </Link>
             </li>
@@ -53,8 +64,19 @@ const Nav = () => {
               }`}
             >
               <Link href="/mynetwork" className="NavList__link">
-                <PeopleIcon className=" text-neutral-600" />
+                <PeopleIcon />
                 <span className="NavList__text">My Network</span>
+              </Link>
+            </li>
+
+            <li
+              className={`NavList mdmin:hidden ${
+                pathname === "/mynetwork" ? "border-b-2" : ""
+              }`}
+            >
+              <Link href="/mynetwork" className="NavList__link">
+                <PeopleIcon />
+                <span className="NavList__text">Post</span>
               </Link>
             </li>
 
@@ -62,18 +84,18 @@ const Nav = () => {
               className={`NavList ${pathname === "/jobs" ? "border-b-2" : ""}`}
             >
               <Link href="/jobs" className="NavList__link">
-                <WorkIcon className=" text-neutral-600" />
+                <WorkIcon />
                 <span className="NavList__text">Jobs</span>
               </Link>
             </li>
 
             <li
-              className={`NavList ${
+              className={`NavList md:hidden   ${
                 pathname === "/message" ? "border-b-2" : ""
               }`}
             >
               <Link href="/message" className="NavList__link">
-                <Message className=" text-neutral-600" />
+                <Message />
                 <span className="NavList__text">Messaging</span>
               </Link>
             </li>
@@ -84,18 +106,18 @@ const Nav = () => {
               }`}
             >
               <Link href="/notification" className="NavList__link">
-                <NotificationAdd className=" text-neutral-600" />
+                <NotificationAdd />
                 <span className="NavList__text">Notifications</span>
               </Link>
             </li>
 
             <li
-              className={`NavList ${
+              className={`NavList md:hidden ${
                 pathname === "/profile" ? "border-b-2" : ""
               }`}
             >
               <Link href="/profile" className=" NavList__link">
-                <AccountCircle className=" text-neutral-600" />
+                <AccountCircle />
                 <div className="flex items-center justify-center ">
                   <span className=" NavList__text">Me</span>
                   <ArrowDropDownIcon />
@@ -108,7 +130,7 @@ const Nav = () => {
             </li>
 
             <li
-              className={`NavList ${
+              className={`NavList md:hidden ${
                 pathname === "/business" ? "border-b-2" : ""
               }`}
             >
@@ -116,7 +138,7 @@ const Nav = () => {
                 href="business"
                 className="NavList__link flex justify-center"
               >
-                <ViewCompactIcon className=" text-neutral-600" />
+                <ViewCompactIcon />
                 <span className="NavList__text">
                   Work
                   <ArrowDropDownIcon />

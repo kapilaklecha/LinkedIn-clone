@@ -86,6 +86,11 @@
   .NavList {
     display: flex;
     align-items: center;
+    color: gray;
+  }
+
+  .NavList:hover {
+    color: black;
   }
   
   .NavList__link {

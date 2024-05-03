@@ -11,7 +11,9 @@ module.exports = {
 
       lg: { max: "1023px" },
 
-      md: { max: "767px" },
+      md: { max: "768px" },
+
+      mdmin: { min: "769px" },
 
       sm: { max: "639px" },
     },
@@ -23,8 +25,9 @@ module.exports = {
       },
       colors: {
         primary: "#0A66C2",
-        secondary: "#2d3748",
+        secondary: "#5f6774",
         danger: "#e3342f",
+        hover: "#F2F2F2",
       },
     },
   },
