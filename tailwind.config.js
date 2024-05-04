@@ -11,9 +11,9 @@ module.exports = {
 
       lg: { max: "1023px" },
 
-      md: { max: "768px" },
+      md: { max: "920px" },
 
-      mdmin: { min: "769px" },
+      mdmin: { min: "920px" },
 
       sm: { max: "639px" },
     },

@@ -3,8 +3,8 @@ import TryIcon from "@mui/icons-material/Try";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 const MidLeftSection = () => {
   return (
-    <div className=" max-w-[225px] bg-white rounded-md mt-5">
-      <div className=" h-[56px] max-w-[225px] ">
+    <div className="  bg-white rounded-md w-full">
+      <div className=" h-[56px] ">
         <img
           src="/k2.png"
           alt=""
