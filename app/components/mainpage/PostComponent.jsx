@@ -1,9 +1,11 @@
 import React from "react";
-import AddIcon from "@mui/icons-material/Add";
+import ImageIcon from "@mui/icons-material/Image";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import ArticleIcon from "@mui/icons-material/Article";
 
 const PostComponent = () => {
   return (
-    <div className=" bg-white  mb-1 px-6 py-4  rounded-md">
+    <div className=" bg-white  mb-1 px-6 pt-4 pb-2 rounded-md">
       <div className=" flex  flex-row gap-2 box-border">
         <a className=" flex items-center ">
           <div className=" h-[48px] w-[48px] ">
@@ -16,23 +18,23 @@ const PostComponent = () => {
         </button>
       </div>
       <div className=" flex items-center justify-around py-4">
-        <button className=" flex items-center">
+        <button className=" flex items-center px-2 py-2 text-secondary hover:bg-hover hover:text-black">
           <div>
-            <AddIcon />
+            <ImageIcon />
           </div>
           Media
         </button>
-        <button className=" flex items-center">
+        <button className=" flex items-center px-2 py-2 text-secondary hover:bg-hover hover:text-black">
           <div>
-            <AddIcon />
+            <CalendarMonthIcon />
           </div>
-          Media
+          Event
         </button>
-        <button className=" flex items-center">
+        <button className=" flex items-center px-2 py-2 text-secondary hover:bg-hover hover:text-black">
           <div>
-            <AddIcon />
+            <ArticleIcon />
           </div>
-          Media
+          Article
         </button>
       </div>
     </div>
