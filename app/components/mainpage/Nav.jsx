@@ -1,6 +1,5 @@
 "use client";
 
-import Searchbar from "@/app/lib/Searchbar";
 import {
   AccountCircle,
   Message,
@@ -15,19 +14,26 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { signOutWithGoogle } from "@/app/lib/firebase/auth";
+import { removeSession } from "@/Actions/auth-actions";
 
 const Nav = () => {
   const pathname = usePathname();
+  const handleSignOut = async () => {
+    await signOutWithGoogle();
+    await removeSession();
+  };
+
   return (
-    <div className=" bg-white border-b border-gray-200 skicky left-0 top-0 w-[100vw] px-6 z-50">
+    <div className=" bg-white border-b border-gray-200 skicky left-0 top-0 w-[100vw] px-6 z-50 ">
       <div className=" flex items-center my-0 mx-auto min-h-[100%] max-w-[1128px] ">
-        <div className=" flex my-1 w-full">
+        <div className=" flex my-1 w-full items-center">
           <span className=" mr-2 text-[0px] ">
             <a href="home">
               <img src="/home-logo.svg" alt="home-logo" />
             </a>
           </span>
-          <div className=" opacity-100 flex-grow relative ">
+          <div className=" opacity-100 flex-grow relative  ">
             <div className=" max-w-[280x] mr-4">
               <input
                 type="text"
@@ -51,7 +57,7 @@ const Nav = () => {
         </div>
         <nav className=" ml-auto block md:fixed md:left-0 md:bottom-0 md:bg-white md:w-[100%]  ">
           <ul className="flex flex-nowrap list-none md:flex md:justify-between">
-            <li className={`NavList ${pathname === "/" ? "border-b-2" : ""}`}>
+            <li className={`NavList ${pathname === "/main" ? "active" : ""}`}>
               <Link href="/" className=" NavList__link">
                 <HomeIcon />
                 <span className=" NavList__text">Home</span>
@@ -112,11 +118,11 @@ const Nav = () => {
             </li>
 
             <li
-              className={`NavList md:hidden ${
+              className={`NavList group md:hidden  relative ${
                 pathname === "/profile" ? "border-b-2" : ""
               }`}
             >
-              <Link href="/profile" className=" NavList__link">
+              <Link href="/profile" className=" NavList__link ">
                 <AccountCircle />
                 <div className="flex items-center justify-center ">
                   <span className=" NavList__text">Me</span>
@@ -124,8 +130,15 @@ const Nav = () => {
                 </div>
               </Link>
 
-              <div className=" signOut">
-                <a>Sign Out</a>
+              <div className=" hidden absolute group-hover:block bg-white top-[52px] py-2 w-full z-10 border">
+                <div className=" flex justify-center">
+                  <button
+                    className=" text-primary text-[14px]"
+                    onClick={handleSignOut}
+                  >
+                    Sign Out
+                  </button>
+                </div>
               </div>
             </li>
 

@@ -1,14 +1,14 @@
-import React from "react";
-import Nav from "../components/mainpage/Nav";
+"use client";
 import "./Main.css";
+import Nav from "../components/mainpage/Nav";
 import MidSection from "../components/mainpage/MidSection";
 import MidLeftSection from "../components/mainpage/MidLeftSection";
 import RightSection from "../components/mainpage/RightSection";
-
-const Main = () => {
+import PostComponent from "../components/mainpage/PostComponent";
+export default function Home() {
   return (
-    <div className=" ">
-      <div className="">
+    <div>
+      <div>
         <Nav />
       </div>
       <div className="px-6 md:px-0">
@@ -16,7 +16,8 @@ const Main = () => {
           <div className=" w-[100%] max-w-[225px] flex-shrink md:hidden">
             <MidLeftSection />
           </div>
-          <div className=" w-[100%] min-w-[440px] ">
+          <div className=" w-[100%]  ">
+            <PostComponent />
             <MidSection />
           </div>
 
@@ -27,6 +28,4 @@ const Main = () => {
       </div>
     </div>
   );
-};
-
-export default Main;
+}

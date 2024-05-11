@@ -1,5 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { cookies } from "next/headers";
+
+import { SESSION_COOKIE_NAME } from "@/constants";
+import LoginNav from "./components/LoginNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,9 +13,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const session = cookies().get(SESSION_COOKIE_NAME)?.value || null;
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <LoginNav session={session} />
+        {children}
+      </body>
     </html>
   );
 }

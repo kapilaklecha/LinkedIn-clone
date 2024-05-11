@@ -8,10 +8,10 @@ const LoginMainForm = () => {
           htmlFor="session_key"
           className="text-secondary inline-block mb-1"
         >
-          Email or phone
+          Email
         </label>
         <div className="border border-secondary px-4 py-[14px] rounded hover:border-2 hover:bg-zinc-50">
-          <input type="tel" className=" w-full outline-none bg-transparent" />
+          <input type="Email" className=" w-full outline-none bg-transparent" />
         </div>
       </div>
 
@@ -40,10 +40,10 @@ const LoginMainForm = () => {
           Sign In
         </button>
       </div>
-      <div class="flex items-center justify-center py-4">
-        <div class="flex-1 h-0 border-t border-gray-600 border-opacity-35"></div>
-        <span class="mx-4 text-gray-500">or</span>
-        <div class="flex-1 h-0 border-t border-gray-600 border-opacity-35"></div>
+      <div className="flex items-center justify-center py-4">
+        <div className="flex-1 h-0 border-t border-gray-600 border-opacity-35"></div>
+        <span className="mx-4 text-gray-500">or</span>
+        <div className="flex-1 h-0 border-t border-gray-600 border-opacity-35"></div>
       </div>
       <div className=" text-xs text-secondary pb-4  leading-[18px] ">
         <p>

@@ -5,14 +5,14 @@ import ModeCommentIcon from "@mui/icons-material/ModeComment";
 import ShareIcon from "@mui/icons-material/Share";
 const MidSection = () => {
   return (
-    <div className=" bg-white px-6 h-fit py-1">
+    <div className=" bg-white px-6 h-fit py-1 rounded-md">
       <div className=" flex flex-row gap-1 shrink-0  mt-1">
-        <a href="">
+        <a className=" cursor-pointer">
           <img src="/google.png" width={"48px"} height={"48"} alt="" />
         </a>
         <div className=" max-w- ">
           <div className="">
-            <a href="" className=" text-[14px]">
+            <a className=" text-[14px] cursor-pointer">
               AWS Training & Certification
             </a>
             <span className=" text-[14px] text-secondary">{" 2nd "}</span>
@@ -26,10 +26,10 @@ const MidSection = () => {
           </div>
         </div>
         <div className="flex justify-end ml-auto p-1 ">
-          <a href="" className="flex items-center   text-primary">
+          <button className="flex items-center   text-primary">
             <AddIcon />
-            <span>FOLLOW</span>
-          </a>
+            <span>Follow</span>
+          </button>
         </div>
       </div>
       <div>
@@ -39,7 +39,7 @@ const MidSection = () => {
       </div>
       <div>{false ? <img src="/k2.png" alt="" /> : ""}</div>
       <div className=" flex justify-between items-center  text-[12px] mb-2 text-secondary hover:text-black">
-        <a href="" className=" flex items-center gap-1">
+        <a className=" flex items-center cursor-pointer gap-1">
           <ThumbUpIcon className=" w-4" />
           <span>{" 2234 "}</span>
         </a>
@@ -48,18 +48,18 @@ const MidSection = () => {
         </p>
       </div>
       <div className=" flex items-center justify-between text-secondary py-2 border-t ">
-        <div className=" flex items-center gap-1 hover:text-black">
+        <button className=" flex items-center gap-1 hover:text-black">
           <ThumbUpIcon />
           <span>Like</span>
-        </div>
-        <div className=" flex items-center gap-1 hover:text-black">
+        </button>
+        <button className=" flex items-center gap-1 hover:text-black">
           <ModeCommentIcon />
           <span>Comment</span>
-        </div>
-        <div className=" flex items-center gap-1 hover:text-black">
+        </button>
+        <button className=" flex items-center gap-1 hover:text-black">
           <ShareIcon />
           <span>Share</span>
-        </div>
+        </button>
       </div>
     </div>
   );

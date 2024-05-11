@@ -12,7 +12,7 @@ const MidLeftSection = () => {
         />
       </div>
       <div className=" p-3">
-        <a href="" className=" flex flex-col justify-center">
+        <a className=" flex flex-col justify-center cursor-pointer">
           <div className=" self-center relative w-fit h-fit">
             <img
               src="/k2.png"
@@ -31,10 +31,7 @@ const MidLeftSection = () => {
         </div>
       </div>
       <div className=" border-y">
-        <a
-          href=""
-          className=" flex justify-between px-[12px] py-1 text-[12px] hover:bg-hover "
-        >
+        <a className=" flex justify-between px-[12px] py-1 text-[12px] cursor-pointer hover:bg-hover ">
           <div className="text-secondary">Profile Views</div>
           <div>
             <span className=" text-primary">
@@ -42,10 +39,7 @@ const MidLeftSection = () => {
             </span>
           </div>
         </a>
-        <a
-          href=""
-          className=" flex justify-between px-[12px] py-1 text-[12px] hover:bg-hover "
-        >
+        <a className=" flex justify-between px-[12px] py-1 text-[12px] cursor-pointer hover:bg-hover ">
           <div>
             <div className="text-secondary">Connections</div>
             <div className=" font-semibold"> Grow your network</div>
@@ -58,7 +52,7 @@ const MidLeftSection = () => {
         </a>
       </div>
       <div className=" group  text-[12px]  cursor-pointer placeholder py-1 px-3 hover:bg-hover">
-        <a href="">
+        <a>
           <h3>Get hired 2.6x faster with Premium</h3>
           <div className=" my-1">
             <span>
@@ -73,10 +67,10 @@ const MidLeftSection = () => {
           </div>
         </a>
       </div>
-      <div className="group px-3 py-1 text-[12px] font-semibold hover:bg-hover">
+      <div className="group px-3 py-1 text-[12px] font-semibold cursor-pointer hover:bg-hover">
         <BookmarkIcon className=" w-4  text-secondary group-hover:text-black" />
         {"  "}
-        <span className=" group-hover:text-black">Save items</span>
+        <button className=" group-hover:text-black">Save items</button>
       </div>
     </div>
   );
