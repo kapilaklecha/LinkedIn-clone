@@ -47,7 +47,7 @@ const LoginMainForm = () => {
       </div>
       <div className=" text-xs text-secondary pb-4  leading-[18px] ">
         <p>
-          By clicking Continue to join or sign in, you agree to LinkedIn's
+          {"By clicking Continue to join or sign in, you agree to LinkedIn's"}
           <a
             href=""
             className=" text-primary hover:border-b hover:border-primary"
