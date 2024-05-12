@@ -1,6 +1,15 @@
+"use client";
 import React from "react";
+import { signInWithGoogle } from "../lib/firebase/auth";
+import { createSession, removeSession } from "@/Actions/auth-actions";
 
 const LoginMainForm = () => {
+  const handleSignIn = async () => {
+    const userUid = await signInWithGoogle();
+    if (userUid) {
+      await createSession(userUid);
+    }
+  };
   return (
     <div className=" max-w-[408px] flex flex-col gap-2">
       <div className="mt-1.5 ">
@@ -47,7 +56,7 @@ const LoginMainForm = () => {
       </div>
       <div className=" text-xs text-secondary pb-4  leading-[18px] ">
         <p>
-          {"By clicking Continue to join or sign in, you agree to LinkedIn's"}
+          {"By clicking Continue to join or sign in, you agree to LinkedIn's "}
           <a
             href=""
             className=" text-primary hover:border-b hover:border-primary"
@@ -77,7 +86,7 @@ const LoginMainForm = () => {
         flex flex-row justify-center  hover:bg-slate-50 hover:border-2 cursor-pointer"
         >
           <img src="/google.png" alt="google Auth" className=" w-5 mr-2" />
-          <button>Continue with Google</button>
+          <button onClick={handleSignIn}>Continue with Google</button>
         </div>
         <button
           className="text-black  text-[16px] rounded-full py-4 px-6 w-full 

@@ -13,7 +13,7 @@ import { signInWithGoogle } from "../lib/firebase/auth";
 import { createSession, removeSession } from "@/Actions/auth-actions";
 import { usePathname } from "next/navigation";
 
-const LoginNav = (session) => {
+const LoginNav = () => {
   const pathname = usePathname();
   const handleSignIn = async () => {
     const userUid = await signInWithGoogle();
