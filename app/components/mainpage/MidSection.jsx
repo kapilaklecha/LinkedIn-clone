@@ -50,20 +50,20 @@ const MidSection = () => {
         </p>
       </div>
       <div className=" flex items-center justify-between text-secondary py-2 border-t px-6">
-        <button className=" flex items-center gap-1 hover:text-black">
-          <ThumbUpIcon />
-          <span>Like</span>
-        </button>
-        <button className=" flex items-center gap-1 hover:text-black">
-          <ModeCommentIcon />
-          <span>Comment</span>
-        </button>
-        <button className=" flex items-center gap-1 hover:text-black">
-          <ShareIcon />
-          <span>Share</span>
-        </button>
+        <ButtonB text={"Like"} logo={<ThumbUpIcon />} />
+        <ButtonB text={"Comment"} logo={<ModeCommentIcon />} />
+        <ButtonB text={"Share"} logo={<ShareIcon />} />
       </div>
     </div>
+  );
+};
+
+const ButtonB = ({ text, logo }) => {
+  return (
+    <button className=" flex items-center gap-1 px-4 py-2 hover:text-black hover:bg-hover">
+      {logo}
+      <span>{text}</span>
+    </button>
   );
 };
 
