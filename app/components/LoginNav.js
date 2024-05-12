@@ -28,7 +28,7 @@ const LoginNav = () => {
         <a href="#">
           <Image
             src="/LinkedIn-Blue-14@2x.png"
-            alt="LinkedIn"
+            alt="SocialIn"
             width={102}
             height={25}
           />

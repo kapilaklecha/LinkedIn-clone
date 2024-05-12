@@ -101,7 +101,7 @@ const LoginMainForm = () => {
         my-4  flex-shrink-0  
         flex flex-row justify-center  hover:bg-slate-50 hover:border-2 cursor-pointer"
         >
-          New to LinkedIn? Join now
+          New to SocialIn? Join now
         </button>
       </div>
     </div>
