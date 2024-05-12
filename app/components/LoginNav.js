@@ -15,7 +15,6 @@ import { usePathname } from "next/navigation";
 
 const LoginNav = (session) => {
   const pathname = usePathname();
-  const userSessionId = useUserSession(session);
   const handleSignIn = async () => {
     const userUid = await signInWithGoogle();
     if (userUid) {
@@ -24,7 +23,7 @@ const LoginNav = (session) => {
   };
   if (pathname == "/") {
     return (
-      <div className="nav pt-3 pb-4 flex items-center justify-between relative flex-nowrap">
+      <div className="nav pt-3 pb-4 flex items-center justify-between relative flex-nowrap md:px-4">
         <a href="#">
           <img
             src="/LinkedIn-Blue-14@2x.png"

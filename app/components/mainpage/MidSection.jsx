@@ -3,6 +3,7 @@ import AddIcon from "@mui/icons-material/Add";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ModeCommentIcon from "@mui/icons-material/ModeComment";
 import ShareIcon from "@mui/icons-material/Share";
+
 const MidSection = () => {
   return (
     <div className=" bg-white px-6 h-fit py-1 rounded-md">

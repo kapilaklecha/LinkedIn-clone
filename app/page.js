@@ -6,9 +6,9 @@ import { exploreData } from "./lib/data";
 
 const loginPage = () => {
   return (
-    <div className="md:px-4  ">
-      <main className="flex flex-col items-center overflow-hidden min-h-[calc(100vh-76px-50px)] lg:p-2">
-        <section className=" max-w-[1128px]  relative flex w-[100%] items-center  flex-nowrap  md:flex-col">
+    <div>
+      <main className="flex flex-col items-center overflow-hidden min-h-[calc(100vh-76px-50px)] lg:p-2 md:p-0">
+        <section className=" max-w-[1128px]  relative flex w-[100%] items-center  flex-nowrap  md:flex-col md:px-4">
           <div className=" self-start  relative flex-shrink-0 w-[55%] pr-[42px] md:w-full md:pr-0">
             <h1 className=" main-heading text-[56px] text-[#B24020] font-thin pb-6 md:text-[32px] md:leading-10 md:pt-4">
               Welcome to your professional community
@@ -23,7 +23,7 @@ const loginPage = () => {
           />
         </section>
         <section className=" max-w-[1128px] flex flex-wrap items-center  md:flex-col ">
-          <div className="mr-[72px] py-[60px] self-start shrink-0  w-[408px] md:w-fit md:mb-6">
+          <div className="mr-[72px] py-[60px] self-start shrink-0  w-[408px] md:w-fit md:mb-6 md:px-4">
             <h2 className=" secondary-heading">
               Explore Collaberative atricle
             </h2>
@@ -39,7 +39,7 @@ const loginPage = () => {
             <BlueBtn name={"Show all"} />
           </div>
         </section>
-        <section className=" max-w-[1128px] flex flex-wrap items-center py-[60px]  relative md:flex-col ">
+        <section className=" max-w-[1128px] flex flex-wrap items-center py-[60px]  relative md:flex-col md:px-4">
           <div className="mr-[72px]  self-start shrink-0  w-[408px] md:w-fit md:mb-6">
             <h2 className=" secondary-heading ">
               Find the right job or internship for you
@@ -58,7 +58,7 @@ const loginPage = () => {
             </div>
           </div>
         </section>
-        <section className=" bg-[#f1ece5] w-full flex items-center justify-center">
+        <section className=" bg-[#f1ece5] w-full flex items-center justify-center  md:px-4">
           <div className=" max-w-[1128px] flex flex-wrap items-center py-[60px] w-full  relative md:flex-col  ">
             <div className="mr-[72px]  self-start shrink-0  w-[408px] md:w-fit md:mb-6 before:contents">
               <h2 className=" tertiary-heading ">
@@ -70,7 +70,7 @@ const loginPage = () => {
             </div>
           </div>
         </section>
-        <section className=" max-w-[1128px] flex flex-wrap items-center py-[60px]  relative md:flex-col ">
+        <section className=" max-w-[1128px] flex flex-wrap items-center py-[60px]  relative md:flex-col md:px-4">
           <div className="mr-[72px]  self-start shrink-0  w-[408px] md:w-fit md:mb-6">
             <h2 className=" secondary-heading ">
               Discover the best software tools
