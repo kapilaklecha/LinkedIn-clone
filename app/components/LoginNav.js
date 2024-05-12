@@ -12,6 +12,7 @@ import { useUserSession } from "@/Hooks/use-user-session";
 import { signInWithGoogle } from "../lib/firebase/auth";
 import { createSession, removeSession } from "@/Actions/auth-actions";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const LoginNav = () => {
   const pathname = usePathname();
@@ -25,10 +26,11 @@ const LoginNav = () => {
     return (
       <div className="nav pt-3 pb-4 flex items-center justify-between relative flex-nowrap md:px-4">
         <a href="#">
-          <img
+          <Image
             src="/LinkedIn-Blue-14@2x.png"
             alt="LinkedIn"
-            className="w-[102px]"
+            width={102}
+            height={25}
           />
         </a>
         <ul className="flex justify-between flex-wrap">

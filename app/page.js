@@ -3,6 +3,7 @@ import LoginNav from "./components/LoginNav";
 import LoginMainForm from "./components/LoginMainForm";
 import Buttons, { BlueBtn } from "./lib/Buttons";
 import { exploreData } from "./lib/data";
+import Image from "next/image";
 
 const loginPage = () => {
   return (
@@ -16,9 +17,11 @@ const loginPage = () => {
             <LoginMainForm />
           </div>
 
-          <img
+          <Image
             src="/asset.svg"
             alt=""
+            width={700}
+            height={560}
             className=" relative z-[-1] w-[700px] h-[560px]  md:h-[214px] md:static"
           />
         </section>

@@ -1,24 +1,27 @@
 import React from "react";
 import TryIcon from "@mui/icons-material/Try";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
+import Image from "next/image";
 const MidLeftSection = () => {
   return (
     <div className="  bg-white rounded-md w-full">
       <div className=" h-[56px] ">
-        <img
+        <Image
           src="/k2.png"
           alt=""
+          width={56}
+          height={56}
           className="w-[100%] h-[100%] object-cover rounded-t-md"
         />
       </div>
       <div className=" p-3">
         <a className=" flex flex-col justify-center cursor-pointer">
           <div className=" self-center relative w-fit h-fit">
-            <img
+            <Image
               src="/k2.png"
               alt=""
-              width={"72px"}
-              height={"72px"}
+              width={72}
+              height={72}
               className="rounded-full border-2 border-white  mt-[-56px] mb-2"
             />
           </div>

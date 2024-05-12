@@ -3,13 +3,14 @@ import AddIcon from "@mui/icons-material/Add";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ModeCommentIcon from "@mui/icons-material/ModeComment";
 import ShareIcon from "@mui/icons-material/Share";
+import Image from "next/image";
 
 const MidSection = () => {
   return (
     <div className=" bg-white px-6 h-fit py-1 rounded-md">
       <div className=" flex flex-row gap-1 shrink-0  mt-1">
         <a className=" cursor-pointer">
-          <img src="/google.png" width={"48px"} height={"48"} alt="" />
+          <Image src="/google.png" width={48} height={48} alt="profile-pic" />
         </a>
         <div className=" max-w- ">
           <div className="">

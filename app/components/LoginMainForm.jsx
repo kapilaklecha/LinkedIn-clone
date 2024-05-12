@@ -2,6 +2,7 @@
 import React from "react";
 import { signInWithGoogle } from "../lib/firebase/auth";
 import { createSession, removeSession } from "@/Actions/auth-actions";
+import Image from "next/image";
 
 const LoginMainForm = () => {
   const handleSignIn = async () => {
@@ -85,7 +86,13 @@ const LoginMainForm = () => {
         my-4  flex-shrink-0  
         flex flex-row justify-center  hover:bg-slate-50 hover:border-2 cursor-pointer"
         >
-          <img src="/google.png" alt="google Auth" className=" w-5 mr-2" />
+          <Image
+            src="/google.png"
+            alt="google Auth"
+            width={20}
+            height={20}
+            className=" w-5 mr-2"
+          />
           <button onClick={handleSignIn}>Continue with Google</button>
         </div>
         <button

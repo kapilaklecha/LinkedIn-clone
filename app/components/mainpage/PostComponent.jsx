@@ -2,6 +2,7 @@ import React from "react";
 import ImageIcon from "@mui/icons-material/Image";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ArticleIcon from "@mui/icons-material/Article";
+import Image from "next/image";
 
 const PostComponent = () => {
   return (
@@ -9,7 +10,13 @@ const PostComponent = () => {
       <div className=" flex  flex-row gap-2 box-border">
         <a className=" flex items-center ">
           <div className=" h-[48px] w-[48px] ">
-            <img src="/k2.png" alt="" className="rounded-full w-full h-full " />
+            <Image
+              src="/k2.png"
+              alt=""
+              width={48}
+              height={48}
+              className="rounded-full w-full h-full "
+            />
           </div>
         </a>
 
