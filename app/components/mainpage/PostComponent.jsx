@@ -5,7 +5,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 
 const PostComponent = () => {
   return (
-    <div className=" bg-white  mb-1 px-6 pt-4 pb-2 rounded-md">
+    <div className=" bg-white  mb-1 px-6 pt-4 pb-2 rounded-md md:hidden">
       <div className=" flex  flex-row gap-2 box-border">
         <a className=" flex items-center ">
           <div className=" h-[48px] w-[48px] ">
