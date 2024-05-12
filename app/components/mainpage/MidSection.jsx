@@ -7,8 +7,8 @@ import Image from "next/image";
 
 const MidSection = () => {
   return (
-    <div className=" bg-white px-6 h-fit py-1 rounded-md">
-      <div className=" flex flex-row gap-1 shrink-0  mt-1">
+    <div className=" bg-white  h-fit py-1 rounded-md">
+      <div className=" flex flex-row gap-1 shrink-0  mt-1 px-6">
         <a className=" cursor-pointer">
           <Image src="/google.png" width={48} height={48} alt="profile-pic" />
         </a>
@@ -34,13 +34,13 @@ const MidSection = () => {
           </button>
         </div>
       </div>
-      <div>
+      <div className="px-6">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel dolorum
         quo dolor consectetur in a reiciendis illum natus sint aliquam impedit
         ut nobis inventore perspiciatis, commodi eligendi. Minima, et quam!
       </div>
       <div>{false ? <img src="/k2.png" alt="" /> : ""}</div>
-      <div className=" flex justify-between items-center  text-[12px] mb-2 text-secondary hover:text-black">
+      <div className=" flex justify-between items-center  text-[12px] mb-2 text-secondary hover:text-black px-6">
         <a className=" flex items-center cursor-pointer gap-1">
           <ThumbUpIcon className=" w-4" />
           <span>{" 2234 "}</span>
@@ -49,7 +49,7 @@ const MidSection = () => {
           <span>{22}</span> comments
         </p>
       </div>
-      <div className=" flex items-center justify-between text-secondary py-2 border-t ">
+      <div className=" flex items-center justify-between text-secondary py-2 border-t px-6">
         <button className=" flex items-center gap-1 hover:text-black">
           <ThumbUpIcon />
           <span>Like</span>
