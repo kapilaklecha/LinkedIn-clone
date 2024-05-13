@@ -4,6 +4,7 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ModeCommentIcon from "@mui/icons-material/ModeComment";
 import ShareIcon from "@mui/icons-material/Share";
 import Image from "next/image";
+import CommentBox from "./CommentBox";
 
 const MidSection = () => {
   return (
@@ -54,6 +55,7 @@ const MidSection = () => {
         <ButtonB text={"Comment"} logo={<ModeCommentIcon />} />
         <ButtonB text={"Share"} logo={<ShareIcon />} />
       </div>
+      <CommentBox />
     </div>
   );
 };
